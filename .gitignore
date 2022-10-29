@@ -4,7 +4,7 @@ QtProject.conf
 mimeapps.list
 vlc/
 pipewire-media-session/
-qBitorrent/
+qBittorrent/
 pulse/
 Thunar/
 gtk-3.0/
@@ -14,4 +14,7 @@ quodlibet/
 xarchiver/
 libreoffice/
 ristretto/
+inkscape/
+omf/
+xfce4/
 
