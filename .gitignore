@@ -1,0 +1,13 @@
+userdirs.locale
+userdirs.dirs
+QtProject.conf
+mimeapps.list
+vlc/
+pipewire-media-session/
+qBitorrent/
+pulse/
+Thunar/
+gtk-3.0/
+ibus/
+dconf/
+quodlibet/
