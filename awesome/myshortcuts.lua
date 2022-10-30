@@ -1,32 +1,30 @@
--- My shortcuts for awesomewm
+
+-- My shortcuts for awesomewm - Jaglux12
+
 local gears = require("gears")
 local awful = require("awful")
 local naughty = require("naughty")
-
 local menubar = require("menubar")
 
--- local hotkeys_popup = require("awful.hotkeys_popup")
-local modkey = "Mod1"
+-- Teclas principales
+local modkey = "Mod1" -- Código Alt (izquierdo)
+local modkey = "#108" -- Código Alt Gr (derecho)
 
 -- swap alt and ctrl (for Emacs reasons)
 local altkey = "Control"
 local ctrlkey = "Mod1"
 
 local home = os.getenv("HOME")
+
+-- Programas principales
 local terminal = "xfce4-terminal"
--- local terminal = "wezterm"
-local editor = "micro"
+local editor = "nano"
 local gui_editor = "mousepad"
 local file_manager = "thunar"
 local browser = "firefox"
-
--- local private_browser = browser .. " --private-window"
-local private_browser = browser .. " --incognito"
-
 local telegram = home .. "/.local/bin/telegram"
-
--- local telegram = "telegram-desktop"
 local rofi_dir = home .. "/.config/awesome/rofi/"
+
 local scripts_dir = home .. "/.config/myshell/scripts/"
 local lockscreen = "betterlockscreen -l"
 
@@ -51,8 +49,6 @@ end
 
 -- {{{ Key bindings
 local globalkeys = gears.table.join(
-   -- awful.key({ modkey,             }, "/",        hotkeys_popup.show_help,
-   --             {description="show help", group="awesome"}),
 
    awful.key({ modkey, }, "l",
       function()
@@ -60,19 +56,19 @@ local globalkeys = gears.table.join(
       end,
       {description = "view previous", group = "client"}),
 
-   awful.key({ modkey, }, "Right",
+   awful.key({ modkey, }, "j",
       function()
 	 awful.client.focus.bydirection("right")
       end,
       {description = "view previous", group = "client"}),
 
-   awful.key({ modkey, }, "Up",
+   awful.key({ modkey, }, "i",
       function()
 	 awful.client.focus.bydirection("up")
       end,
       {description = "view previous", group = "client"}),
 
-   awful.key({ modkey, }, "Down",
+   awful.key({ modkey, }, "k",
       function()
 	 awful.client.focus.bydirection("down")
       end,
@@ -139,14 +135,16 @@ local globalkeys = gears.table.join(
       end,
       {description = "go back", group = "client"}),
 
-   -- Standard program
-   awful.key({ modkey, }, "Return", function () awful.spawn(terminal) end,
-      {description = "open a terminal", group = "launcher"}),
+   -- Ejecución de programas
+
+   -- Ejecutar: terminal
+   awful.key({ modkey }, "t", function () awful.spawn(terminal) end,
+      {description = "abrir una terminal", group = "launcher"}),
 
    awful.key({ modkey, }, "z", awful.tag.history.restore,
       {description = "View previous tag", group = "tag"}),
 
-   awful.key({ modkey, "Shift" }, "r", awesome.restart,
+   awful.key({ modkey}, "r", awesome.restart,
       {description = "reload awesome", group = "awesome"}),
 
    awful.key({ modkey, "Shift" }, "q", awesome.quit,
