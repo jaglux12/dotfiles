@@ -31,12 +31,12 @@ local themes = {
     "pastel",        -- 9
 }
 
-local chosen_theme = "one-dark"
+local chosen_theme = "pastel"
 local modkey       = "Mod4"
 local altkey       = "Mod1"
 local vi_focus     = false -- vi-like client focus - https://github.com/lcpz/awesome-copycats/issues/275
 local cycle_prev   = true -- cycle trough all previous client or just the first -- https://github.com/lcpz/awesome-copycats/issues/274
-local editor       = os.getenv("EDITOR") or "geany"
+local editor       = os.getenv("EDITOR") or "nano"
 local browser      = os.getenv("BROWSER") or "firefox"
 
 awful.util.terminal = terminal

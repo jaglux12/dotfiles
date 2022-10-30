@@ -6,25 +6,25 @@ local naughty = require("naughty")
 local menubar = require("menubar")
 
 -- local hotkeys_popup = require("awful.hotkeys_popup")
-local modkey = "Mod4"
+local modkey = "Mod1"
 
 -- swap alt and ctrl (for Emacs reasons)
 local altkey = "Control"
 local ctrlkey = "Mod1"
 
 local home = os.getenv("HOME")
-local terminal = "alacritty"
+local terminal = "xfce4-terminal"
 -- local terminal = "wezterm"
 local editor = "micro"
 local gui_editor = "mousepad"
-local file_manager = "nemo"
+local file_manager = "thunar"
+local browser = "firefox"
 
--- local browser = "firefox"
-local browser = "brave"
 -- local private_browser = browser .. " --private-window"
 local private_browser = browser .. " --incognito"
 
 local telegram = home .. "/.local/bin/telegram"
+
 -- local telegram = "telegram-desktop"
 local rofi_dir = home .. "/.config/awesome/rofi/"
 local scripts_dir = home .. "/.config/myshell/scripts/"
@@ -54,7 +54,7 @@ local globalkeys = gears.table.join(
    -- awful.key({ modkey,             }, "/",        hotkeys_popup.show_help,
    --             {description="show help", group="awesome"}),
 
-   awful.key({ modkey, }, "Left",
+   awful.key({ modkey, }, "l",
       function()
 	 awful.client.focus.bydirection("left")
       end,
@@ -95,9 +95,9 @@ local globalkeys = gears.table.join(
       {description = "focus previous by index", group = "client"}
    ),
 
-   awful.key({ modkey, }, "w",
+   awful.key({ modkey, }, "h",
       function ()
-	 awful.spawn("rofi -show window")
+	 awful.spawn("rofi -show run")
       end,
       {description = "show all windows from all workspaces", group = "awesome"}),
 
