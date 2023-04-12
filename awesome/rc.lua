@@ -85,7 +85,7 @@ beautiful.menu_width=150
 beautiful.menu_bg_normal="#2b3339"
 beautiful.menu_bg_focus="#fef8e7"
 beautiful.menu_fg_focus="#2b3339"
-beautiful.useless_gap=5
+beautiful.useless_gap=3
 --beautiful.menu_fg_normal=
 
 mymainmenu = awful.menu({ items = {
@@ -471,4 +471,6 @@ client.connect_signal("unfocus", function(c) c.border_color = beautiful.border_n
 
 -- Autostart configurations
 awful.util.spawn("bash /home/jaglux12/.config/polybar/launch.sh --colorblocks &")
-awful.util.spawn("picom --experimental-backends --config /home/jaglux12/.config/picom/p.conf -b")
+awful.util.spawn("picom --config /home/jaglux12/.config/picom/p.conf -b ")
+
+-- --experimental-backends --blur-background-fixed 
